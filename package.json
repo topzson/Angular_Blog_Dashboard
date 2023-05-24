@@ -10,7 +10,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^16.0.0",
+    "@angular/animations": "^16.0.2",
     "@angular/Cli": "npm:@angular/cli@^16.0.2",
     "@angular/common": "^16.0.0",
     "@angular/compiler": "^16.0.0",
@@ -22,6 +22,7 @@
     "@angular/router": "^16.0.2",
     "bootstrap": "4.6",
     "firebase": "9.9.1",
+    "ngx-toastr": "^17.0.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.5.2",
     "zone.js": "^0.13.0"
