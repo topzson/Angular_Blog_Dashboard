@@ -73,6 +73,6 @@ export class NewPostComponent implements OnInit{
       createdAt: new Date()
     }
 
-    this.postService.uploadImage(this.selectedimg);
+    this.postService.uploadImage(this.selectedimg , postData);
   }
 }
