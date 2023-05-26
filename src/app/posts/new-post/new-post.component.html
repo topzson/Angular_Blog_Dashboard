@@ -17,11 +17,11 @@
               <label for> Title </label>
               <input type="text" class="form-control" (keyup)="onTitleChanged($event)" formControlName="title"
                 [ngClass]="{'is-invalid': fc['title'].touched && fc['title'].invalid}">
-              <div *ngif='fc.title.errors?.required'>
+              <div *ngif="fc.title.errors?.['required']">
                 <div class="alert alert-danger" *ngif='fc.title.touched && fc.title.invalid'>
                   Title is required</div>
               </div>
-              <div *ngif='fc.title.errors?.minlength'>
+              <div *ngif="fc.title.errors?.['minlength']">
                 <div class="alert alert-danger" *ngif='fc.title.touched && fc.title.invalid'>
                   Title must be atleast 10 charectors long</div>
               </div>
@@ -33,7 +33,7 @@
                 formControlName="permalink"
                 [ngClass]="{'is-invalid': fc['permalink'].touched && fc['permalink'].invalid}">
 
-              <div *ngif='fc.permalink.errors?.required'>
+              <div *ngif="fc.permalink.errors?.['required']">
                 <div class="alert alert-danger" *ngif='fc.permalink.touched && fc.permalink.invalid'>
                   Permalink is required</div>
               </div>

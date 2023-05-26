@@ -8,6 +8,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +22,7 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { CategoriesComponent } from './categories/categories.component';
 import { AllPostComponent } from './posts/all-post/all-post.component';
 import { NewPostComponent } from './posts/new-post/new-post.component';
+import { LoginComponent } from './auth/login/login.component';
 
 
 @NgModule({
@@ -31,6 +34,7 @@ import { NewPostComponent } from './posts/new-post/new-post.component';
     CategoriesComponent,
     AllPostComponent,
     NewPostComponent,
+    LoginComponent,
 
   ],
   imports: [
@@ -44,7 +48,9 @@ import { NewPostComponent } from './posts/new-post/new-post.component';
     AngularEditorModule,
     HttpClientModule,
     ReactiveFormsModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    AngularFireAuthModule
   ],
   providers: [{ provide: FIREBASE_OPTIONS, useValue: environment.firebase }],
   bootstrap: [AppComponent]
