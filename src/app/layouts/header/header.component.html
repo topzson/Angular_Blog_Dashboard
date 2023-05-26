@@ -1,9 +1,20 @@
 <header class="navber navbar-expand-lg fixed-top bg-white shadow-eff">
 
     <div class="container">
-        <div class=" row pt-4 mt-2 justify-content-center">
-            <a class="site-logo" href="#">
-                TOPZ-BLOG</a>
+        <div class="row mt-4 pt-2">
+            <div class="col-md-9 ">
+                <div class="text-center">
+                    <a class="site-logo" href="#">
+                    TOPZ-BLOG</a>
+                </div>
+             
+            </div>
+            <div class="col-md-3 float-rigth" *ngIf="isLoggedIn$ | async">
+                <a href="#" class="mr-3"> {{userEmail}}</a>
+                <button
+                    class="btn btn-sm btn-info bg-secondary-theme text-theme-primary" (click)="onlogOut()">Logout</button>
+
+            </div>
         </div>
 
     </div>
