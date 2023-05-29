@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "ang-blog-9ab69"
+  },
+  "targets": {
+    "ang-blog-9ab69": {
+      "hosting": {
+        "angularBlogDashboard": [
+          "ang-blog-dashboard-9ab69"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
